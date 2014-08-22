@@ -9,12 +9,12 @@
   	<groupId>org.sakaiproject.talisaspire</groupId>
   	<artifactId>talisaspire-base</artifactId>
   	<packaging>war</packaging>
-    <version>11-SNAPSHOT</version>
+    <version>10-SNAPSHOT</version>
 
 	<parent>
         <groupId>org.sakaiproject</groupId>
         <artifactId>master</artifactId>
-        <version>11-SNAPSHOT</version>
+        <version>10-SNAPSHOT</version>
         <relativePath>../master/pom.xml</relativePath>
     </parent>
 
