@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<registration>
+    <tool id="sakai.talisaspire" 
+    	title="Reading Lists" 
+    	description="Talis Aspire Reading List Tool">
+    
+    	<category name="course" />
+        <category name="project" />
+    </tool>
+</registration>
