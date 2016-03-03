@@ -19,7 +19,6 @@
     </parent>
 
 	<properties>
-        <log4j.version>1.2.8</log4j.version>
         <servlet-api.version>2.4</servlet-api.version>
         <commons-lang.version>2.4</commons-lang.version>
     </properties>
@@ -105,12 +104,6 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-		</dependency>
-    
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<scope>provided</scope>
 		</dependency>
     
 		<dependency>
