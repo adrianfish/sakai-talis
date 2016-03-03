@@ -7,7 +7,7 @@
 
   	<name>Sakai Talis Aspire</name>
   	<groupId>org.sakaiproject.talisaspire</groupId>
-  	<artifactId>talisaspire-base</artifactId>
+  	<artifactId>sakai-talis</artifactId>
   	<packaging>war</packaging>
     <version>10-SNAPSHOT</version>
 
