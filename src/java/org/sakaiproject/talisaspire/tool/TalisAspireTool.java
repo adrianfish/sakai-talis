@@ -40,6 +40,7 @@ import org.sakaiproject.exception.IdUnusedException;
  * @author Adrian Fish (a.fish@lancaster.ac.uk)
  */
 public class TalisAspireTool extends HttpServlet {
+
 	private Logger logger = Logger.getLogger(TalisAspireTool.class);
 
     private SiteService siteService;
@@ -47,13 +48,12 @@ public class TalisAspireTool extends HttpServlet {
 	private ServerConfigurationService serverConfigurationService;
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		if (logger.isDebugEnabled())
-			logger.debug("doGet()");
+
+		logger.debug("doGet()");
 		
-		String host = serverConfigurationService.getString("talisaspire.host","http://localhost");
-		System.out.println("HOST: " + host);
-		String hierarchy = serverConfigurationService.getString("talisaspire.hierarchy","lists");
-		boolean useSiteIdAsTalisCode = serverConfigurationService.getBoolean("talisaspire.useSiteIdAsTalisCode",false);
+		String host = serverConfigurationService.getString("talisaspire.host", "http://localhost");
+		String hierarchy = serverConfigurationService.getString("talisaspire.hierarchy", "lists");
+		boolean useSiteIdAsTalisCode = serverConfigurationService.getBoolean("talisaspire.useSiteIdAsTalisCode", false);
 		
 		String siteId = toolManager.getCurrentPlacement().getContext();
 		Site site = null;
@@ -64,12 +64,12 @@ public class TalisAspireTool extends HttpServlet {
 		}
 		
 		String talisCode = "";
-		if(useSiteIdAsTalisCode) {
+		if (useSiteIdAsTalisCode) {
 			talisCode = site.getId();
 		} else {
 			ResourceProperties props = site.getProperties();
 			talisCode = props.getProperty("taliscode");
-			if(talisCode == null || talisCode.length() <= 0) {
+			if (talisCode == null || talisCode.length() <= 0) {
 				talisCode = site.getTitle();
 			}
 		}
@@ -86,10 +86,10 @@ public class TalisAspireTool extends HttpServlet {
 	}
 
 	public void init(ServletConfig config) throws ServletException {
+
 		super.init(config);
 
-		if (logger.isDebugEnabled())
-			logger.debug("init");
+		logger.debug("init");
 
 		try {
 			ComponentManager componentManager = org.sakaiproject.component.cover.ComponentManager.getInstance();
